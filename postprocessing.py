@@ -26,9 +26,9 @@ async def runscreenshot(playwright: Playwright, url, screenshotpath):
     browser = await chromium.launch()
     page = await browser.new_page()
     await page.goto(url)
-    clip_area = {"x": 395, "y": 720, "width": 490, "height": 720}
+    # clip_area = {"x": 395, "y": 720, "width": 490, "height": 720}
     # Save the screenshot
-    await page.screenshot(path=screenshotpath, quality = 20, type = 'jpeg', clip=clip_area)
+    await page.screenshot(path=screenshotpath, quality = 20, type = 'jpeg')
     await browser.close()
 
 async def user_videos():
